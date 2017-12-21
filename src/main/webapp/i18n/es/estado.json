@@ -1,0 +1,10 @@
+{
+    "bibliotecaApp": {
+        "Estado" : {
+            "null": "",
+            "PRESTADO": "PRESTADO",
+            "RESERVADO": "RESERVADO",
+            "LIBRE": "LIBRE"
+        }
+    }
+}

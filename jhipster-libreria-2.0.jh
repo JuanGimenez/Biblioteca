@@ -1,0 +1,48 @@
+entity Libro {
+	codLibro String required
+    estado Estado  
+}
+entity Ejemplar {
+	isbn String required
+    tituloLibro String
+    autor String
+    numeroEjemplares Integer
+    ejemplaresDisponibles Integer
+    idioma Language   
+}
+entity Empleado {
+	codEmpleado String required
+    nombreEmpleado String
+    apellidoEmpleado String
+    departamentoEmpleado String 
+    email String
+    telefono String
+}
+entity Libreria {
+	codLibreria String required
+    capacidad Integer
+}
+
+entity Prestamo {
+	codigoPrestamo String required
+    fechaPrestado ZonedDateTime
+    fechasDevuelto ZonedDateTime
+}
+relationship OneToMany {
+	Ejemplar{libro(codLibro)} to Libro{ejemplar(isbn)}
+}
+relationship OneToMany {
+	Libro{prestamo} to Prestamo{libro(codLibro)}
+}
+relationship OneToMany {
+	Empleado{prestamo} to Prestamo{empleado(codEmpleado)}
+}
+relationship OneToMany {
+	Libreria{libro} to Libro{libreria(codLibreria)}
+}
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+enum Estado{
+PRESTADO, RESERVADO, LIBRE
+}

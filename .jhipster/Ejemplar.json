@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "libro",
+            "otherEntityName": "libro",
+            "otherEntityRelationshipName": "ejemplar"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "isbn",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tituloLibro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "autor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroEjemplares",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ejemplaresDisponibles",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "idioma",
+            "fieldType": "Language",
+            "fieldValues": "FRENCH,ENGLISH,SPANISH"
+        }
+    ],
+    "changelogDate": "20171221111722",
+    "entityTableName": "ejemplar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

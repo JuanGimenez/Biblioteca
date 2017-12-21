@@ -1,0 +1,25 @@
+{
+    "bibliotecaApp": {
+        "prestamo" : {
+            "home": {
+                "title": "Prestamos",
+                "createLabel": "Create a new Prestamo",
+                "createOrEditLabel": "Create or edit a Prestamo"
+            },
+            "created": "A new Prestamo is created with identifier {{ param }}",
+            "updated": "A Prestamo is updated with identifier {{ param }}",
+            "deleted": "A Prestamo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Prestamo {{ id }}?"
+            },
+            "detail": {
+                "title": "Prestamo"
+            },
+            "codigoPrestamo": "Codigo Prestamo",
+            "fechaPrestado": "Fecha Prestado",
+            "fechasDevuelto": "Fechas Devuelto",
+            "libro": "Libro",
+            "empleado": "Empleado"
+        }
+    }
+}

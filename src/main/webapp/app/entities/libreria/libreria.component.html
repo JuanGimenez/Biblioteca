@@ -1,0 +1,60 @@
+<div>
+    <h2>
+        <span jhiTranslate="bibliotecaApp.libreria.home.title">Librerias</span>
+        <button class="btn btn-primary float-right jh-create-entity create-libreria" [routerLink]="['/', { outlets: { popup: ['libreria-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="bibliotecaApp.libreria.home.createLabel">
+            Create new Libreria
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="librerias">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="bibliotecaApp.libreria.codLibreria">Cod Libreria</span></th>
+            <th><span jhiTranslate="bibliotecaApp.libreria.capacidad">Capacidad</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let libreria of librerias ;trackBy: trackId">
+                <td><a [routerLink]="['../libreria', libreria.id ]">{{libreria.id}}</a></td>
+                <td>{{libreria.codLibreria}}</td>
+                <td>{{libreria.capacidad}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../libreria', libreria.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'libreria/'+ libreria.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'libreria/'+ libreria.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

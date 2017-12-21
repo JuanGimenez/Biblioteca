@@ -1,0 +1,46 @@
+
+<div *ngIf="ejemplar">
+    <h2><span jhiTranslate="bibliotecaApp.ejemplar.detail.title">Ejemplar</span> {{ejemplar.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.isbn">Isbn</span></dt>
+        <dd>
+            <span>{{ejemplar.isbn}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.tituloLibro">Titulo Libro</span></dt>
+        <dd>
+            <span>{{ejemplar.tituloLibro}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.autor">Autor</span></dt>
+        <dd>
+            <span>{{ejemplar.autor}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.numeroEjemplares">Numero Ejemplares</span></dt>
+        <dd>
+            <span>{{ejemplar.numeroEjemplares}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.ejemplaresDisponibles">Ejemplares Disponibles</span></dt>
+        <dd>
+            <span>{{ejemplar.ejemplaresDisponibles}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.ejemplar.idioma">Idioma</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bibliotecaApp.Language.' + ejemplar.idioma}}">{{ejemplar.idioma}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'ejemplar/'+ ejemplar.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

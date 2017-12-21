@@ -1,0 +1,27 @@
+{
+    "bibliotecaApp": {
+        "empleado" : {
+            "home": {
+                "title": "Empleados",
+                "createLabel": "Create a new Empleado",
+                "createOrEditLabel": "Create or edit a Empleado"
+            },
+            "created": "A new Empleado is created with identifier {{ param }}",
+            "updated": "A Empleado is updated with identifier {{ param }}",
+            "deleted": "A Empleado is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Empleado {{ id }}?"
+            },
+            "detail": {
+                "title": "Empleado"
+            },
+            "codEmpleado": "Cod Empleado",
+            "nombreEmpleado": "Nombre Empleado",
+            "apellidoEmpleado": "Apellido Empleado",
+            "departamentoEmpleado": "Departamento Empleado",
+            "email": "Email",
+            "telefono": "Telefono",
+            "prestamo": "Prestamo"
+        }
+    }
+}

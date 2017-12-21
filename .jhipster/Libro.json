@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "prestamo",
+            "otherEntityName": "prestamo",
+            "otherEntityRelationshipName": "libro"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "ejemplar",
+            "otherEntityName": "ejemplar",
+            "otherEntityField": "isbn"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "libreria",
+            "otherEntityName": "libreria",
+            "otherEntityField": "codLibreria"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "codLibro",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "PRESTADO,RESERVADO,LIBRE"
+        }
+    ],
+    "changelogDate": "20171221111721",
+    "entityTableName": "libro",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

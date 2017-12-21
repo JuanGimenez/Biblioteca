@@ -1,0 +1,46 @@
+
+<div *ngIf="empleado">
+    <h2><span jhiTranslate="bibliotecaApp.empleado.detail.title">Empleado</span> {{empleado.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bibliotecaApp.empleado.codEmpleado">Cod Empleado</span></dt>
+        <dd>
+            <span>{{empleado.codEmpleado}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.empleado.nombreEmpleado">Nombre Empleado</span></dt>
+        <dd>
+            <span>{{empleado.nombreEmpleado}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.empleado.apellidoEmpleado">Apellido Empleado</span></dt>
+        <dd>
+            <span>{{empleado.apellidoEmpleado}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.empleado.departamentoEmpleado">Departamento Empleado</span></dt>
+        <dd>
+            <span>{{empleado.departamentoEmpleado}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.empleado.email">Email</span></dt>
+        <dd>
+            <span>{{empleado.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="bibliotecaApp.empleado.telefono">Telefono</span></dt>
+        <dd>
+            <span>{{empleado.telefono}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'empleado/'+ empleado.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

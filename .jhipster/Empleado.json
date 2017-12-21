@@ -1,0 +1,46 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "prestamo",
+            "otherEntityName": "prestamo",
+            "otherEntityRelationshipName": "empleado"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "codEmpleado",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nombreEmpleado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidoEmpleado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "departamentoEmpleado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171221111723",
+    "entityTableName": "empleado",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

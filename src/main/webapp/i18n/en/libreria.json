@@ -1,0 +1,23 @@
+{
+    "bibliotecaApp": {
+        "libreria" : {
+            "home": {
+                "title": "Librerias",
+                "createLabel": "Create a new Libreria",
+                "createOrEditLabel": "Create or edit a Libreria"
+            },
+            "created": "A new Libreria is created with identifier {{ param }}",
+            "updated": "A Libreria is updated with identifier {{ param }}",
+            "deleted": "A Libreria is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Libreria {{ id }}?"
+            },
+            "detail": {
+                "title": "Libreria"
+            },
+            "codLibreria": "Cod Libreria",
+            "capacidad": "Capacidad",
+            "libro": "Libro"
+        }
+    }
+}

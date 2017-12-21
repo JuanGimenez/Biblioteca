@@ -1,0 +1,27 @@
+{
+    "bibliotecaApp": {
+        "ejemplar" : {
+            "home": {
+                "title": "Ejemplars",
+                "createLabel": "Crear nuevo Ejemplar",
+                "createOrEditLabel": "Crear o editar Ejemplar"
+            },
+            "created": "Un nuevo Ejemplar ha sido creado con el identificador {{ param }}",
+            "updated": "Un Ejemplar ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Ejemplar ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Ejemplar {{ id }}?"
+            },
+            "detail": {
+                "title": "Ejemplar"
+            },
+            "isbn": "Isbn",
+            "tituloLibro": "Titulo Libro",
+            "autor": "Autor",
+            "numeroEjemplares": "Numero Ejemplares",
+            "ejemplaresDisponibles": "Ejemplares Disponibles",
+            "idioma": "Idioma",
+            "libro": "Libro"
+        }
+    }
+}

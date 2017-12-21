@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "libro",
+            "otherEntityName": "libro",
+            "otherEntityRelationshipName": "libreria"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "codLibreria",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "capacidad",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171221111724",
+    "entityTableName": "libreria",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
